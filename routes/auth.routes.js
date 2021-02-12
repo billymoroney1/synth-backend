@@ -1,4 +1,4 @@
-const { verifySignup } = require('../middlewares')
+const { verifyRegister } = require('../middlewares')
 const controller = require('../controllers/auth.controller')
 
 module.exports = function(app) {
@@ -11,8 +11,7 @@ module.exports = function(app) {
         next()
     })
     //set up signup route and pass middleware to check username, email, and roles
-    app.post("/api/auth/signup",
-    [verifySignup.checkDuplicateUsernameOrEmail], controller.signup)
+    app.post("/api/auth/register", verifyRegister.checkDuplicateUsernameOrEmail, controller.register)
     //handle sign in
-    app.post("/api/auth/signin", controller.signin)
+    app.post("/api/auth/signin", controller.login)
 }

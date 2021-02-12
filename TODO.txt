@@ -1,1 +1,12 @@
-make a synth db in mongodb
+
+make register/login forms in frontend
+
+check if mongoose model can accept an object
+set up button to save a preset
+retreive presets to profile page
+button to delete preset
+button to edit preset, need to then retreive preset on the synth ui screen
+retreive single preset to playback page
+
+REDIRECT IN NEXTJS?????????
+https://nextjs.org/docs/api-reference/next/router

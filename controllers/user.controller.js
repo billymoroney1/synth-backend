@@ -1,3 +1,3 @@
-const User = require('../model/user.model')
+const User = require('../models/user.model')
 
 //get user profile
