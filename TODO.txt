@@ -1,7 +1,6 @@
 
-make register/login forms in frontend
+finish presets controller
 
-check if mongoose model can accept an object
 set up button to save a preset
 retreive presets to profile page
 button to delete preset
