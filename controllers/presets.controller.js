@@ -1,4 +1,5 @@
 const db = require('../models/index')
+const Preset = require('../models/preset.model')
 const { populate } = require('../models/user.model')
 
 //access to users and presets
@@ -23,19 +24,41 @@ exports.createPreset = (req, res) => {
         res.send({ message: "preset created successfully" })
     })
 }
-// //edit preset
-// exports.editPreset = (req, res) => {
+//edit preset
+exports.editPreset = (req, res) => {
+    const id = req.body.id
+    Preset.updateOne({_id: id}, {
+        body: req.body.body
+    }).then((data) => {
+        if(!data) return res.status(400).send({message: "Unable to update post"})
+        else return res.send(data)
+    })
 
-// }
-// //delete preset
-// exports.deletePreset = (req, res) => {
+}
+//delete preset
+exports.deletePreset = (req, res) => {
+    const id = req.body._id
+    Preset.deleteOne({_id: id})
+        .then((data) => {
+            if(!data) return res.status(400).send({message: "Unable to delete post"})
+            else return res.send(data)
+        })
+}
+//get presets
+exports.allPresets = (req, res) => {
+    Preset.find().then((data) => {
+        res.send(data)
+    })
+    .catch((err) => {
+        res.status(500).send({ message: err })
+    })
+}
 
-// }
-// //get presets
-// exports.allPresets = (req, res) => {
-
-// }
-// //get one preset
-// exports.getPreset = (req, res) => {
-
-// }
+//get one preset
+exports.getPreset = (req, res) => {
+    const id = req.params.idx
+    Preset.find({_id: id}).then((preset) => {
+        if(!preset) return res.status(400).send({ message: "Cannot find this post" })
+        else res.send(preset)
+    })
+}
