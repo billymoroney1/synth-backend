@@ -1,11 +1,16 @@
 
-finish presets controller
-
 set up button to save a preset
 retreive presets to profile page
 button to delete preset
 button to edit preset, need to then retreive preset on the synth ui screen
 retreive single preset to playback page
 
+user controller to get all presets when access profile
+will eventually need to set up dynamic redirect to properly retrieve specific user profile
+
+wireframes/erd/readme
+
 REDIRECT IN NEXTJS?????????
 https://nextjs.org/docs/api-reference/next/router
+
+could set up a useEffect to check for a logged in user on every page, if no user, redirect
