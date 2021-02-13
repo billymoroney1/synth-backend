@@ -1,15 +1,15 @@
 const controller = require('../controllers/presets.controller')
 
 module.exports = function(app) {
-    app.use((req, res, next) => {
-        //set header and allow use of x-access token
-        res.header(
-            "Access-Control-Allow-Headers",
-            "x-access-token, Origin, Content-type, Accept"
-        )
-        res.header("Access-Control-Allow-Origin", '*')
-        next()
-    })
+    // app.use((req, res, next) => {
+    //     //set header and allow use of x-access token
+    //     res.header(
+    //         "Access-Control-Allow-Headers",
+    //         "x-access-token, Origin, Content-type, Accept"
+    //     )
+    //     res.header("Access-Control-Allow-Origin", '*')
+    //     next()
+    // })
 
     // //create new preset
     app.post("/api/presets/preset", controller.createPreset)
