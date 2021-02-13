@@ -1,10 +1,9 @@
 const db = require('../models/index')
-const Preset = require('../models/preset.model')
 const { populate } = require('../models/user.model')
 
 //access to users and presets
 const User = db.user
-const Post = db.post
+const Preset = db.preset
 
 //make a preset
 exports.createPreset = (req, res) => {
