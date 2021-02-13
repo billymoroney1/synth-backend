@@ -2,7 +2,6 @@ const config = require('../config/auth.config')
 const db = require('../models/index')
 
 const User = db.user
-const Preset = db.preset
 
 //grant access to encode and decode the jwt
 const jwt = require('jsonwebtoken')

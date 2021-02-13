@@ -7,7 +7,8 @@ const Preset = db.preset
 //make a preset
 exports.createPreset = (req, res) => {
     const preset = new Preset({
-        name: req.body.name
+        name: req.body.name,
+        options: req.body.options
     })
 
     //save preset
