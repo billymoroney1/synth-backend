@@ -10,7 +10,5 @@ will eventually need to set up dynamic redirect to properly retrieve specific us
 
 wireframes/erd/readme
 
-REDIRECT IN NEXTJS?????????
-https://nextjs.org/docs/api-reference/next/router
 
 could set up a useEffect to check for a logged in user on every page, if no user, redirect
