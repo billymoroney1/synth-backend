@@ -14,7 +14,7 @@ module.exports = function(app) {
     // //delete preset
     // app.delete("/api/presets/preset", controller.deletePreset)
     // //get all presets
-    // app.get('/api/presets', controller.allPresets)
+    app.get('/api/presets/all', controller.allPresets)
     // //get single preset
     // app.get('/api/presets/:id', controller.getPreset)
 }
