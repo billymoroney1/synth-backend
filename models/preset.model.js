@@ -4,7 +4,7 @@ const Preset = mongoose.model(
     'Preset',
     new mongoose.Schema({
         name: String,
-        options: [{}]
+        options: []
     })
 )
 
