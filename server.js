@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 //Setup Mongoose
 const db = require('./models/index')
-const dbURI = process.env.MONGODB_URI || `mongodb://${db.Config.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
+const dbURI = process.env.MONGODB_URI || `mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
 
 //connect to backend
 db.mongoose
