@@ -6,6 +6,8 @@ const cors = require('cors')
 
 const app = express()
 
+require('dotenv').config()
+
 app.use(cors())
 
 //parse requests of content type - application/json
@@ -16,10 +18,11 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 //Setup Mongoose
 const db = require('./models/index')
+const dbURI = process.env.MONGODB_URI || `mongodb://${db.Config.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
 
 //connect to backend
 db.mongoose
-.connect('mongodb://localhost:27017/synth', {
+.connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
