@@ -5,7 +5,8 @@ module.exports = function(app) {
     app.use((req, res, next) => {
         //set header and allow use of x-access token
         res.header(
-            "Access-Control-Allow-Headerse",
+            "Access-Control-Allow-Headers",
+            "Access-Control-Allow-Origin",
             "x-access-token, Origin, Content-type, Accept"
         )
         next()
