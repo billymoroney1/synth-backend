@@ -46,6 +46,6 @@ require('./routes/user.routes')(app)
 
 //set port, listen for request
 const PORT = 8080
-app.listen(PORT, (req, res) => {{
-    res.send('synth backend running')
+app.listen(PORT, () => {{
+    console.log('synth backend running')
 }})
