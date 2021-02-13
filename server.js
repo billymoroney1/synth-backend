@@ -24,6 +24,7 @@ const dbURI = process.env.MONGODB_URI || `mongodb://${dbConfig.HOST}:${dbConfig.
 db.mongoose
 .connect(dbURI, {
     useNewUrlParser: true,
+    useCreateIndex: true,
     useUnifiedTopology: true
 })
 .then(() => {
