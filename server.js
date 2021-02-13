@@ -18,11 +18,11 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 //Setup Mongoose
 const db = require('./models/index')
-// const dbURI = process.env.MONGODB_URI || `mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
+const dbURI = process.env.MONGODB_URI || `mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
 
 //connect to backend
 db.mongoose
-.connect('mongodb+srv://billy:synthpassword@cluster0.ilizr.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+.connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
