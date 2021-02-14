@@ -56,7 +56,7 @@ exports.allPresets = (req, res) => {
 exports.getPreset = (req, res) => {
     const id = req.params.idx
     Preset.find({_id: id}).then((preset) => {
-        if(!preset) return res.status(400).send({ message: "Cannot find this post" })
+        if(!preset) return res.status(400).send({ message: "Cannot find this preset" })
         else res.send(preset)
     })
 }

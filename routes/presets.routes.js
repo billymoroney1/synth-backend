@@ -16,5 +16,5 @@ module.exports = function(app) {
     // //get all presets
     app.get('/api/presets/all', controller.allPresets)
     // //get single preset
-    // app.get('/api/presets/:id', controller.getPreset)
+    app.get('/api/presets/:id', controller.getPreset)
 }
