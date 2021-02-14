@@ -26,9 +26,10 @@ exports.createPreset = (req, res) => {
 exports.editPreset = (req, res) => {
     const id = req.body.id
     Preset.updateOne({_id: id}, {
-        body: req.body.body
+        name: req.body.name,
+        options: req.body.preset
     }).then((data) => {
-        if(!data) return res.status(400).send({message: "Unable to update post"})
+        if(!data) return res.status(400).send({message: "Unable to update preset"})
         else return res.send(data)
     })
 

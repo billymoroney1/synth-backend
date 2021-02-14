@@ -10,7 +10,7 @@ module.exports = function(app) {
     // //create new preset
     app.post("/api/presets/preset", controller.createPreset)
     // //update preset
-    // app.put("/api/presets/preset", controller.editPreset)
+    app.put("/api/presets/preset", controller.editPreset)
     // //delete preset
     app.delete("/api/presets/preset", controller.deletePreset)
     // //get all presets
