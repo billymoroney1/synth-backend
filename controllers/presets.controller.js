@@ -24,7 +24,7 @@ exports.createPreset = (req, res) => {
 }
 //edit preset
 exports.editPreset = (req, res) => {
-    const id = req.body.id
+    const id = req.params.idx
     Preset.updateOne({_id: id}, {
         name: req.body.name,
         options: req.body.preset
